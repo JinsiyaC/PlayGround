@@ -1,0 +1,33 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+public class OverwriteLine {
+   public static void main(String args[]) throws IOException {
+      
+      String filePath = "C:\Users\jinsi\OneDrive\Desktop\text;
+      
+      Scanner sc = new Scanner(new File(Path));
+      
+      StringBuffer buffer = new StringBuffer();
+      
+      while (sc.hasNextLine()) {
+         buffer.append(sc.nextLine()+System.lineSeparator());
+      }
+      String Contents = buffer.toString();
+      System.out.println("Contents of the file: "+Contents);
+      \
+      sc.close();
+      String oldLine = "consectetur adipiscing elit";
+      String newLine = "########### ########## ####";
+      
+      Contents = Contents.replaceAll(oldLine, newLine);
+      
+      FileWriter writer = new FileWriter(Path);
+      System.out.println("");
+      System.out.println("new data: "+Contents);
+      writer.append(Contents);
+      writer.flush();
+   }
+}
